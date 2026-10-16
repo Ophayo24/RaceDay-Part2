@@ -30,7 +30,7 @@
 
 
     ## Video
-    [YouTube walkthrough](https://youtu.be/REPLACE_ME)
+    [YouTube walkthrough] https://youtu.be/wNcqx7GT7WI
 
     ## AI Disclosure
     AI assistance was used to explain EF Core patterns and structure unit tests.
