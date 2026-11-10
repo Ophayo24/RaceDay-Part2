@@ -9,6 +9,11 @@ builder.Services.AddDbContext<RaceDayDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("RaceDayDb")));
 
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<IBlobStorageService, BlobStorageService>();
+builder.Services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(o =>
+{
+    o.MultipartBodyLengthLimit = 5 * 1024 * 1024; // 5 MB
+});
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
